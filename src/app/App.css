@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+}
+
+.App {
+  display: flex;
+  width: 100vw;
+}
+
+.list {
+  border: 1px solid blue;
+  min-width: 15vw;
+  text-align: center;
+  padding-top: 10vh;
+  height: 100vh;
+}
+
+.addList {
+  flex: 1;
+  border: yellow solid 3px;
+  text-align: center;
+  padding-top: 30vh;
+}
+
+.title {
+  padding-bottom: 5vh;
+}
+
+input {
+  margin-bottom: 2vh;
+  height: 5vh;
+  width: 25vw;
+}
+
+
+
+
+
