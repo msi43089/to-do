@@ -1,17 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const addListSlice = createSlice({
-  name: "addList",
+export const listNameSlice = createSlice({
+  name: "listName",
   initialState: "",
   reducers: {
-    addListItem: (state, action) => {
+    createListName: (state, action) => {
       state = action.payload
     },
   },
 });
 
-export const { addListItem } = addListSlice.actions;
+export const { createListName } = listNameSlice.actions;
 
-export const selectListItem = (state) => state.addList;
+export const selectListName = (state) => state.listName;
 
-export default addListSlice.reducer;
+export default listNameSlice.reducer;
