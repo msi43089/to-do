@@ -1,14 +1,14 @@
 import React from "react";
 import "../app/App.css";
 import { useDispatch, useSelector } from "react-redux";
-import { selectListName, addListName } from "./addListSlice";
+import { selectListName, createListName } from "./addListSlice";
 
 export default function AddList() {
   const dispatch = useDispatch();
   const listName = useSelector(selectListName);
   
   const handleListNameChange = (e) =>{
-    dispatch(addListName(e.target.value))
+    dispatch(createListName(e.target.value))
   }
              
   
