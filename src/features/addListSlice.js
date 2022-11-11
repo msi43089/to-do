@@ -5,7 +5,7 @@ export const addListSlice = createSlice({
   initialState: [],
   reducers: {
     addListItem: (state, action) => {
-      state.push(action.payload);
+      state = action.payload
     },
   },
 });
