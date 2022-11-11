@@ -1,11 +1,12 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
 export const listNameSlice = createSlice({
   name: "listName",
   initialState: "",
   reducers: {
     createListName: (state, action) => {
-      state = action.payload
+      state = action.payload;
+      console.log(current(state));
     },
   },
 });
