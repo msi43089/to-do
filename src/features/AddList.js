@@ -13,20 +13,22 @@ export default function AddList() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(addListName(listName));
+    if (listName) {
+      dispatch(addListName(listName));
+    }
   };
 
   return (
     <div className="addList">
       <form onSubmit={handleSubmit}>
-        <label>Enter your list name:</label>
+        <label>Create a new To-Do list</label>
         <input
           id="listName"
           type="text"
           onChange={handleListNameChange}
           value={listName}
         />
-        <input className="submitBtn" type="submit" value="Create List" />
+        <input className="submitBtn" type="submit" value="Submit" />
       </form>
     </div>
   );
