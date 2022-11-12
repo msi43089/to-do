@@ -19,7 +19,7 @@ export default function AddList() {
   return (
     <div className="addList">
       <form onSubmit={handleSubmit}>
-        <label>Enter your list test name:</label>
+        <label>Enter your list name:</label>
         <input
           id="listName"
           type="text"
