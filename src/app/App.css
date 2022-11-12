@@ -16,8 +16,7 @@ body {
 .list {
   border: 1px solid blue;
   min-width: 15vw;
-  text-align: center;
-  padding-top: 10vh;
+  padding: 10vh 2vw 0;
   height: 100vh;
 }
 
@@ -38,7 +37,14 @@ input {
   width: 25vw;
 }
 
+.listNames {
+  display: flex;
+  justify-content: space-between;
+}
 
-
+h3 {
+  text-align: center;
+  margin-bottom: 2vh;
+}
 
 

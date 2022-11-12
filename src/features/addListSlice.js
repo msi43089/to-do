@@ -9,17 +9,24 @@ export const listNameSlice = createSlice({
   reducers: {
     createListName: (state, action) => {
       state.create = action.payload;
-      console.log(current(state));
     },
     addListName: (state, action) => {
-      state.list.push(state.create)
-      state.create = ""
+      state.list.push(state.create);
+      state.create = "";
+    },
+    deleteListName: (state, action) => {
+      state.list = state.list.filter((item) => {
+        return item !== action.payload;
+      });
     },
   },
 });
 
-export const { createListName } = listNameSlice.actions;
+export const { createListName, addListName, deleteListName } =
+  listNameSlice.actions;
 
 export const selectListName = (state) => state.listName.create;
+
+export const selectList = (state) => state.listName.list;
 
 export default listNameSlice.reducer;
