@@ -11,22 +11,23 @@ export default function AddList() {
     dispatch(createListName(e.target.value));
   };
 
-  const handleSumbit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     dispatch(addListName(listName));
   };
 
   return (
     <div className="addList">
-      <h1 className="title">Enter your list name here</h1>
-      <input
-        id="listName"
-        type="text"
-        placeholder="List Name"
-        onChange={handleListNameChange}
-        value={listName}
-      />
-      <br />
-      <button onClick={handleSumbit}>Create List</button>
+      <form onSubmit={handleSubmit}>
+        <label>Enter your list name:</label>
+        <input
+          id="listName"
+          type="text"
+          onChange={handleListNameChange}
+          value={listName}
+        />
+        <input className="submitBtn" type="submit" value="Create List" />
+      </form>
     </div>
   );
 }

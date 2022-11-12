@@ -13,28 +13,44 @@ body {
   width: 100vw;
 }
 
-.list {
-  border: 1px solid blue;
-  min-width: 15vw;
-  padding: 10vh 2vw 0;
-  height: 100vh;
-}
-
 .addList {
   flex: 1;
   border: yellow solid 3px;
-  text-align: center;
   padding-top: 30vh;
+  display: flex;
+  justify-content: center;
 }
 
-.title {
-  padding-bottom: 5vh;
+form {
+  display: flex;
+  flex-direction: column;
+  border: red solid 3px;
+  width: 40%; 
+  align-items: center;
+}
+
+.submitBtn {
+  width: 20%;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+}
+
+label {
+  font-size: 5vh;
+  margin-bottom: 1vh
 }
 
 input {
-  margin-bottom: 2vh;
-  height: 5vh;
-  width: 25vw;
+  margin: 1vh 0;
+}
+
+/* Nav Bar */
+.list {
+  border: 2px solid blue;
+  min-width: 15vw;
+  padding: 10vh 2vw 0;
+  height: 100vh;
 }
 
 .listNames {
@@ -46,5 +62,3 @@ h3 {
   text-align: center;
   margin-bottom: 2vh;
 }
-
-

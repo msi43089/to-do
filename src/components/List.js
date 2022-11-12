@@ -12,6 +12,8 @@ export default function List() {
     dispatch(deleteListName(e.target.value));
   };
 
+  console.log(list);
+
   const listNames = list.map((item) => {
     return (
       <div className="listNames">
