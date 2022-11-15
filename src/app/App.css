@@ -36,7 +36,7 @@ h2 {
 form {
   display: flex;
   border: red solid 3px;
-  justify-content: center;
+  justify-content: center; 
   flex-wrap: wrap;
   height: 20vh;
 }
@@ -87,7 +87,7 @@ h3 {
 /*Lists */
 
 .body-title, .list {
-  font-size: 7vh;
+  font-size: 7vh; 
 }
 
 .body-list, .list {
@@ -99,11 +99,14 @@ h3 {
 .list-title {
   width: 100%;
   border: purple 2px solid;
+  text-align: center;
+  height: 10vh
 }
 
 .list {
   display: flex;
   flex-wrap: wrap;
+  border: yellow 2px solid;
 }
 
 .task-form {
