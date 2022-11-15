@@ -13,7 +13,7 @@ body {
   width: 100vw;
 }
 
-.addList {
+.container {
   flex: 1;
   border: yellow solid 2px;
   padding-top: 30vh;
@@ -21,7 +21,15 @@ body {
   justify-content: center;
 }
 
+/* Home */
 
+h2 {
+  margin-bottom: 2vh;
+}
+
+.home {
+  text-align: center;
+}
 
 /*New List Form*/
 
