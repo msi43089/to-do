@@ -4,5 +4,14 @@ import { useParams } from "react-router-dom";
 export default function List() {
   const { taskId } = useParams();
 
-  return <div>test {taskId}</div>;
+  return (
+    <div className="list">
+      <div className="list-title">{taskId}</div>
+      <form className="task-form">
+        <label>Add a Task</label>
+        <input type="text" placeholder="Enter a task" />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  );
 }

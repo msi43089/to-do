@@ -86,11 +86,26 @@ h3 {
 
 /*Lists */
 
-.body-title {
+.body-title, .list {
   font-size: 7vh;
 }
 
-.body-list {
+.body-list, .list {
   padding-top: 15vh;
 }
 
+/*List*/
+
+.list-title {
+  width: 100%;
+  border: purple 2px solid;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.task-form {
+  width: 100%;
+}
