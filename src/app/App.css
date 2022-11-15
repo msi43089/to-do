@@ -26,7 +26,7 @@ h2 {
   margin-bottom: 2vh;
 }
 
-.home {
+.home, .addList {
   text-align: center;
   padding-top: 30vh;
 }
@@ -93,5 +93,4 @@ h3 {
 .body-list {
   padding-top: 15vh;
 }
-
 

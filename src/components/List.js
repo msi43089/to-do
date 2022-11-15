@@ -2,6 +2,7 @@ import React from "react";
 import "../app/App.css";
 import { selectList, deleteListName } from "../features/addListSlice";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 export default function List({ styling }) {
   const list = useSelector(selectList);
@@ -27,7 +28,13 @@ export default function List({ styling }) {
 
   return (
     <div className={`${styling}-list`}>
-      <h3 className={`${styling}-title`}>To-Do Group</h3>
+      {styling === "nav" ? (
+        <Link to="/lists">
+          <h3 className={`${styling}-title`}>To-Do Group</h3>
+        </Link>
+      ) : (
+        <h3 className={`${styling}-title`}>To-Do Group</h3>
+      )}
       <div>{listNames}</div>
     </div>
   );
