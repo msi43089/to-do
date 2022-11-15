@@ -1,19 +1,20 @@
 import "./App.css";
-import List from "../components/List";
+import Lists from "../components/Lists";
 import AddList from "../features/AddList";
 import { Routes, Route } from "react-router-dom";
 import Home from "../components/Home";
-import Lists from "../components/Lists";
+import List from "../components/List";
 
 function App() {
   return (
     <div className="App">
-      <List styling="nav" />
+      <Lists styling="nav" />
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create-list" element={<AddList />} />
-          <Route path="/lists" element={<Lists />} />
+          <Route path="/lists" element={<Lists styling="body" />} />
+          <Route path="/lists/:taskId" element={<List />} />
         </Routes>
       </div>
     </div>
