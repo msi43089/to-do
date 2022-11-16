@@ -20,6 +20,7 @@ export default function AddList() {
 
   return (
     <div className="addList">
+      <div>Test</div>
       <form onSubmit={handleSubmit}>
         <label>Create a new To-Do list</label>
         <input

@@ -107,6 +107,8 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   border: yellow 2px solid;
+  width: 100%;
+  align-content: flex-start;
 }
 
 .task-form {

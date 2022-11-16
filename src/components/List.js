@@ -6,9 +6,7 @@ export default function List() {
 
   return (
     <div className="list">
-      <div className="list-title">
-        <h3>{taskId}</h3>
-      </div>
+      <div className="list-title">{taskId}</div>
       <form className="task-form">
         <label>Add a Task</label>
         <input type="text" placeholder="Enter a task" />
