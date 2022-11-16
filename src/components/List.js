@@ -10,7 +10,7 @@ export default function List() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(addTask({ test: "test object" }));
+    dispatch(addTask({ listName: "job", text: "adsfadsf" }));
   };
 
   return (

@@ -2,10 +2,26 @@ import { createSlice, current } from "@reduxjs/toolkit";
 
 export const taskSlice = createSlice({
   name: "task",
-  initialState: { work: { id: 1, text: "this is a task" } },
+  initialState: {
+    work: [
+      { id: 1, text: "Do work" },
+      { id: 2, text: "Go home" },
+    ],
+    chores: [
+      { id: 1, text: "Clean dishes" },
+      { id: 2, text: "Vacuum" },
+    ],
+  },
   reducers: {
     addTask: (state, action) => {
-      console.log(current(state));
+      const name = action.payload.listName;
+      if (Object.keys(state).includes(name)) {
+        state[name].push({ id: 5, text: action.payload.text });
+      } else {
+        const newList = { [name]: [{ id: 1, text: action.payload.text }] };
+        console.log(newList);
+        console.log(...state, newList);
+      }
     },
     removeTask: (state, action) => {},
     editTask: (state, action) => {},
