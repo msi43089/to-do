@@ -1,6 +1,6 @@
 import React from "react";
 import "../app/App.css";
-import { selectList, deleteListName } from "../features/addListSlice";
+import { selectList, deleteListName } from "../features/AddList/addListSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 

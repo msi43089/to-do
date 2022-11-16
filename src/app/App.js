@@ -1,6 +1,6 @@
 import "./App.css";
 import Lists from "../components/Lists";
-import AddList from "../features/AddList";
+import AddList from "../features/AddList/AddList";
 import { Routes, Route } from "react-router-dom";
 import Home from "../components/Home";
 import List from "../components/List";

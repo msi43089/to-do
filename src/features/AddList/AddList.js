@@ -1,5 +1,5 @@
 import React from "react";
-import "../app/App.css";
+import "../../app/App.css";
 import { useDispatch, useSelector } from "react-redux";
 import { selectListName, createListName, addListName } from "./addListSlice";
 
@@ -20,7 +20,6 @@ export default function AddList() {
 
   return (
     <div className="addList">
-      <div>Test</div>
       <form onSubmit={handleSubmit}>
         <label>Create a new To-Do list</label>
         <input
