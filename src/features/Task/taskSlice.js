@@ -19,9 +19,10 @@ export const taskSlice = createSlice({
         state[name].push({ id: 5, text: action.payload.text });
       } else {
         const newList = { [name]: [{ id: 1, text: action.payload.text }] };
-        console.log(newList);
-        console.log(...state, newList);
+        const newState = { ...state, ...newList };
+        console.log(newState);
       }
+      console.log(current(state));
     },
     removeTask: (state, action) => {},
     editTask: (state, action) => {},
