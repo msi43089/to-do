@@ -8,14 +8,11 @@ export default function Lists({ styling }) {
   const list = useSelector(selectList);
   const dispatch = useDispatch();
   const params = useParams();
-  console.log(params);
 
   const handleDelete = (e) => {
     console.log(e);
     dispatch(deleteListName(e.target.value));
   };
-
-  console.log(styling);
 
   const listNames = list.map((item) => {
     return (

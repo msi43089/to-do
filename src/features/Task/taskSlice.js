@@ -3,24 +3,30 @@ import { createSlice, current } from "@reduxjs/toolkit";
 export const taskSlice = createSlice({
   name: "task",
   initialState: {
-    work: [
-      { id: 1, text: "Do work" },
-      { id: 2, text: "Go home" },
-    ],
-    chores: [
-      { id: 1, text: "Clean dishes" },
-      { id: 2, text: "Vacuum" },
-    ],
+    todo: {
+      work: [
+        { id: 1, text: "Do work" },
+        { id: 2, text: "Go home" },
+      ],
+      chores: [
+        { id: 1, text: "Clean dishes" },
+        { id: 2, text: "Vacuum" },
+      ],
+    },
   },
   reducers: {
     addTask: (state, action) => {
       const name = action.payload.listName;
-      if (Object.keys(state).includes(name)) {
-        state[name].push({ id: 5, text: action.payload.text });
+      //id counter assumes last item in array is highest id
+      if (Object.keys(state.todo).includes(name)) {
+        const currentTodo = state.todo[name];
+        const idCount = currentTodo[currentTodo.length - 1].id;
+        state.todo[name].push({ id: idCount + 1, text: action.payload.text });
       } else {
-        const newState = { ...state, [name]: [{ id: 1, text: action.payload.text }] };
-        console.log(newState);
-        state = newState
+        state.todo = {
+          ...state.todo,
+          [name]: [{ id: 1, text: action.payload.text }],
+        };
       }
     },
     removeTask: (state, action) => {},
