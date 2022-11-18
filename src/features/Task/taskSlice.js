@@ -29,7 +29,15 @@ export const taskSlice = createSlice({
         };
       }
     },
-    removeTask: (state, action) => {},
+    removeTask: (state, action) => {
+      /*  const name = action.payload[listName];
+      state.todo = {
+        ...state,
+        [name]: state.todo[action.payload.listName].filter(
+          (todo) => todo.id !== action.payload.id
+        ),
+      };*/
+    },
     editTask: (state, action) => {},
   },
 });
