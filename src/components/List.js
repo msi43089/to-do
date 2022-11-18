@@ -9,9 +9,12 @@ export default function List() {
   const dispatch = useDispatch();
   const [task, setTask] = useState("");
 
+  console.log(taskId);
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(addTask({ listName: "job", text: task }));
+    dispatch(addTask({ listName: taskId, text: task }));
+    setTask("");
   };
 
   const handleChange = (e) => {

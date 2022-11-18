@@ -44,6 +44,6 @@ export const taskSlice = createSlice({
 
 export const { addTask } = taskSlice.actions;
 
-export const selectAddTask = (state) => state.task;
+export const selectAddTask = (state) => state.todo;
 
 export default taskSlice.reducer;
